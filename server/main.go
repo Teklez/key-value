@@ -24,6 +24,12 @@ type Client struct {
 	server *Server
 }
 
+// KeyValuePair struct
+type KeyValuePair struct {
+	Key   string
+	Value string
+}
+
 // Start server
 
 func (s *Server) Start(port string) error {
@@ -236,3 +242,4 @@ func (s *Server) LIST(client *Client) ([]KeyValuePair, error) {
 
 	return keyValues, nil
 }
+
